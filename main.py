@@ -53,7 +53,7 @@ with open("coach_2_pokemons.csv", "r") as file:
   for row in reader:
     print("Coach 2: ", row)
 
-from pokemon2 import*
+
 from pokemon import Pokemon
 from weapon_type import WeaponType
 
@@ -208,14 +208,14 @@ def main():
 
     # Choose first pokemons
     copy1= get_pokemon_in_a_list_of_pokemons(1,copy1)
-    id= int(input(""))
+    id= int(input("Select the id of the pokemon you want to use: "))
     pokemon1= None
     for pokemon in copy1:
       if pokemon.get_id()==id:
         pokemon1= pokemon
 
     copy2= get_pokemon_in_a_list_of_pokemons(2,copy2)
-    id= int(input(""))
+    id= int(input("Select the id of the pokemon you want to use: "))
     pokemon2= None
     for pokemon in copy2:
       if pokemon.get_id()==id:
@@ -226,14 +226,14 @@ def main():
     while coach_is_undefeated(copy1) and coach_is_undefeated(copy2):
       if not pokemon1.is_alive():
         copy1= get_pokemon_in_a_list_of_pokemons(1,copy1)
-        id= int(input(""))
+        id= int(input("Select the id of the pokemon you want to use: "))
         pokemon1= None
         for pokemon in copy1:
           if pokemon.get_id()==id:
             pokemon1= pokemon
       if not pokemon2.is_alive():
         copy2= get_pokemon_in_a_list_of_pokemons(2,copy2)
-        id= int(input(""))
+        id= int(input("Select the id of the pokemon you want to use: "))
         pokemon2= None
         for pokemon in copy2:
           if pokemon.get_id()==id:
@@ -265,3 +265,5 @@ if __name__ == "__main__":
 
 
 # EOF
+
+from pokemon2 import*
