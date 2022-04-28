@@ -38,6 +38,8 @@ with open("Pokemon.csv", "r") as file:
   for row in reader:
     print(row)
 
+
+print("          ")
 import csv 
 
 with open("coach_1_pokemons.csv", "r") as file:
@@ -45,12 +47,13 @@ with open("coach_1_pokemons.csv", "r") as file:
   for row in reader:
     print("Coach 1: ", row)
 
+print("          ")
 with open("coach_2_pokemons.csv", "r") as file:
   reader = csv.reader(file)
   for row in reader:
     print("Coach 2: ", row)
 
-
+from pokemon2 import*
 from pokemon import Pokemon
 from weapon_type import WeaponType
 
