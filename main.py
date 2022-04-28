@@ -41,11 +41,14 @@ with open("Pokemon.csv", "r") as file:
 
 print("          ")
 import csv 
-
+lista1 = []
+lista2 = []
 with open("coach_1_pokemons.csv", "r") as file:
   reader = csv.reader(file)
   for row in reader:
     print("Coach 1: ", row)
+    lista1.append(row)
+    lista2.append(row)
 
 print("          ")
 with open("coach_2_pokemons.csv", "r") as file:
